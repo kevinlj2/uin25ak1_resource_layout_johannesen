@@ -7,6 +7,50 @@
     --white: #fff;
 }
 
+* {
+    font-family: "Montserrat", serif;
+
+}
+
 body {
     background-color: var(--gray);
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+        flex-direction: row;
+        list-style: none;
+
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+
+    h3 {
+        color: var(--violet);
+        font-size: px;
+    }
+
+    a {
+        color: var(--blue);
+    }
+}
+
+button {
+    font-size: 32px;
+    border: none;
+    font-weight: bold;
+    background: var(--violet);
+    color: var(--white)
+}
+
