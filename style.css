@@ -1,56 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-    --violet: #2A324B;
-    --blue: #58699D;
-    --gray: #E1E5EE;
-    --white: #fff;
+  --violet: #2a324b;
+  --blue: #58699d;
+  --gray: #e1e5ee;
+  --white: #fff;
 }
 
 * {
-    font-family: "Montserrat", serif;
-
+  font-family: "Montserrat", serif;
 }
 
 body {
-    background-color: var(--gray);
+  background-color: var(--gray);
 }
 
 header {
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
+  margin: 0 60px;
+  max-width: 100%;
+
+  nav ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
-    nav ul {
-        display: flex;
-        gap: 1rem;
-        flex-direction: row;
-        list-style: none;
-
-    }
+    align-items: baseline;
+    gap: 1rem;
+    flex-direction: row;
+    list-style: none;
+  }
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--white);
+  display: flex;
+  justify-content: left;
+  background-color: var(--white);
+  padding: 100px;
+  margin: 0px 100px;
+  max-width: 75%;
 
-    h3 {
-        color: var(--violet);
-        font-size: px;
-    }
+  h3 {
+    color: var(--violet);
+    font-size: 28px;
+  }
 
-    a {
-        color: var(--blue);
-    }
+  a {
+    color: var(--blue);
+  }
 }
 
 button {
-    font-size: 32px;
-    border: none;
-    font-weight: bold;
-    background: var(--violet);
-    color: var(--white)
+  font-size: 24px;
+  padding: 1rem 40px;
+  border: none;
+  font-weight: bold;
+  background: var(--violet);
+  color: var(--white);
 }
 
+.active {
+  background-color: var(--white);
+  color: var(--violet);
+}
