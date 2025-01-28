@@ -1,25 +1,37 @@
-// Lager en array for alle knappene som skller hvilken tekst som skal vises
+// Lager en array for alle knappene som skiller hvilken tekst som skal vises
 const categories = ["HTML", "CSS", "JavaScript", "React", "Sanity and headless CMS"];
 
-// .map for å kunne peke på spesefikt object
+// Deklarerer en funksjon for å vise informasjon basert på kategori
+function displayCategories(category) {
+  // Bruker .filter() for å filtrere gjennom resources for at kategoriene skal være 
+  // lik som den som har blitt trykket på
+  const resource = resources.filter((res) => res.category === category)[0];
+
+// Legger til event listeners for knappene
+// .map for å kunne peke på spesifikk kategori
 categories.map((category) => {
   document.getElementById(category).addEventListener("click", () => {
-    // Ved å bruke .filter() kan man filtrere etter gitt parametere
-    // I linjen under sier koden at hvis kategorien samsvarer 
-    // med knappen som ble trykt på, så skriver den ut samsvarende tekst
-    const resource = resources.filter((res) => res.category === category)[0];
-
-    // Skriver inn i HTML
-    // Lager en template litterate for å kunne legge inn informasjonen
-    // .join("") blir brukt å fjerne komma som .map genererer mellom tekststrengene
-    document.getElementById("textBox").innerHTML = `    
-      <article>
-        <h3>${resource.category}</h3>
-        <p>${resource.text}</p>
-        <ul>
-          ${resource.sources.map((source) => `<li><a href="${source.url}">${source.title}</a></li>`).join("")}
-        </ul>
-      </article>
-    `;
+    // Funksjonen viser hvilken kategori som skal 
+    // vises basert på hvilken som er trykket på
+    displayCategories(category);
   });
 });
+
+  // Skriver inn i HTML via document.getElementById("textBox").innerHTML
+  // Lager en template litterate for å kunne legge inn informasjonen
+  document.getElementById("textBox").innerHTML = `    
+    <article>
+      <h3>${resource.category}</h3>
+      <p>${resource.text}</p>
+      <ul>
+        ${resource.sources.map((source) => `<li><a href="${source.url}">${source.title}</a></li>`).join("")}
+      </ul>
+    </article>
+  `;
+    // bruker .map for å kunne skille mellom URL-en og tittelen til kildene.
+    // .join("") blir brukt å fjerne komma som .map genererer mellom tekststrengene
+}
+
+// Kaller på displayCateories og peker spesifikkt på HTML 
+// for at HTML skal være tilstedet ved oppstart av side
+displayCategories("HTML");
