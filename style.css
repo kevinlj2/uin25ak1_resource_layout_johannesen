@@ -37,8 +37,8 @@ main {
   justify-content: left;
   background-color: var(--white);
   padding: 50px;
-  width: 50%;
-  height: 50%;
+  width: 950px;
+  height: 250px;
 
   h3 {
     color: var(--violet);
