@@ -15,7 +15,10 @@ body {
   background-color: var(--gray);
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
+  height: 100vh;
 }
 
 nav {
