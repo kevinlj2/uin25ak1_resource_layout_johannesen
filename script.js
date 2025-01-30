@@ -6,14 +6,21 @@ const categories = [
   "React",
   "Sanity and headless CMS",
 ];
+
+// HTML er aktiv fra starten av siden den HTML er den
+// siden som er aktiv når siden blir loaded
 let activeButton = "HTML";
 
 // Kilde brukt for å lage funksjonen https://www.w3schools.com/jsref/jsref_substring.asp
 // Deklarerer en funksjon som sier at button-IDen "sanity" er det samme som "Sanity and headless CMS"
 function getCategoryId(category) {
+  // Her blir det laget en condition at hvis category er det 
+  // samme som "Sanity and headless CMS" så blir den sendt tilbake
   return category === "Sanity and headless CMS"
+    // De 6 første bokstavene fra category blir "lagret"
     ? category.substring(0, 6)
-    : category;
+    // Hvis ikke de matcher så blir category sendt tilbake uendret (Altså enten, HTML, CSS, JavaScript eller React)
+    : category; 
 }
 
 // Legger til event listeners for knappene
