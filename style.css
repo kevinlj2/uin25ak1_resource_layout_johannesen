@@ -18,17 +18,16 @@ body {
   flex-wrap: wrap;
 }
 
-  nav {
-    ul {
-      display: flex;
-      gap: 17px;
-      list-style: none;
-      display: flex;
-      margin: 0px;
-      padding: 0px;
-    }
+nav {
+  ul {
+    display: flex;
+    gap: 17px;
+    list-style: none;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
   }
-
+}
 
 main {
   display: flex;
