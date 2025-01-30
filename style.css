@@ -13,31 +13,26 @@
 
 body {
   background-color: var(--gray);
+
 }
 
-header {
-  display: flex;
-  justify-content: left;
-  align-items: baseline;
-  margin: 0 60px;
-  max-width: 100%;
-
-  nav ul {
+  nav, ul {
     display: flex;
-    align-items: baseline;
-    gap: 1rem;
+    justify-content: left;
     flex-direction: row;
     list-style: none;
+    text-indent: 0;
+    margin: 0px;
   }
-}
+
 
 main {
   display: flex;
   justify-content: left;
   background-color: var(--white);
-  padding: 100px;
-  margin: 0px 100px;
-  max-width: 75%;
+  padding: 50px;
+  width: 50%;
+  height: 50%;
 
   h3 {
     color: var(--violet);
@@ -51,7 +46,7 @@ main {
 
 button {
   font-size: 24px;
-  padding: 1rem 40px;
+  padding: 1rem 30px;
   border: none;
   font-weight: bold;
   background: var(--violet);
