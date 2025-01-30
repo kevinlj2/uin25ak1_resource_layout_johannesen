@@ -46,3 +46,5 @@ function displayCategories(category) {
 // Kaller på displayCateories og peker spesifikkt på HTML 
 // for at HTML skal være tilstedet ved oppstart av side
 displayCategories("HTML");
+
+//github repository https://github.com/kevinlj2/uin25ak1_resource_layout_johannesen
